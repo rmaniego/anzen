@@ -1,4 +1,5 @@
 <template>
+  <!DOCTYPE html>
   <Html lang="en">
     <Head>
       <Title>AnZen | IT Security Notes</Title>

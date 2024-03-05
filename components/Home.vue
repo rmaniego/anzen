@@ -13,10 +13,19 @@ export default {
 <template>
   <client-only>
     <div class="az-main">
-      <div class="az-samurai-main">
-        <div class="az-brand-anzen1">An</div>
-        <div class="az-brand-anzen2">Zen</div>
-        <img src="/samurai-main.png" class="az-samurai-sketch" width="300px" />
+      <div class="az-page az-samurai-page">
+        <div class="az-samurai-main">
+          <div class="az-brand-anzen1">An</div>
+          <div class="az-brand-anzen2">Zen</div>
+          <div class="az-red-sun"></div>
+          <img src="/samurai-main.png" class="az-samurai-sketch" width="300px" />
+        </div>
+        <a href="#AZIntro" class="az-action-faito">
+          <div class="az-faito-text">ファイト</div>
+          <div class="az-faito-down">&#751;</div>
+        </a>
+      </div>
+      <div id="AZIntro" class="az-page">
       </div>
       <div class="copyright">&copy; 2024 <a href="https://github.com/rmaniego/" class="profile leckerli-one">Rydeon <span class="emoji1">⚡</span><span class="emoji2">✨</span></a></div>
     </div>
@@ -32,18 +41,41 @@ export default {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: 'AkiraDEMO';
   src: url('/font/AkiraDEMO.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'HKNipponika-Regular';
+  src: url('/font/HKNipponika-Regular.ttf') format('truetype');
+}
+
+html {
+  scroll-behavior: smooth !important;
+  -webkit-scroll-behavior: smooth;
+}
+
 .az-main {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: #eee !important;
+  scroll-behavior: smooth !important;
+  -webkit-scroll-behavior: smooth;
+}
+
+.az-page {
+  height: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth;
 }
 
 .az-samurai-main {
@@ -53,7 +85,17 @@ export default {
   width: 300px;
 }
 
+.az-red-sun {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #bc002d;
+  border-radius: 100%;
+  z-index: 0;
+}
+
 .az-samurai-sketch {
+  z-index: 50;
   rotate: 355deg;
 }
 
@@ -77,6 +119,31 @@ export default {
   font-weight: 400;
   rotate: 355deg;
   z-index: 100;
+}
+
+.az-action-faito {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  font-family: 'HKNipponika-Regular', Arial, sans-serif;
+  font-size: 100px;
+  text-align: center;
+  text-decoration: none;
+  color: #111;
+  cursor: pointer;
+}
+
+.az-faito-text {
+  font-family: 'HKNipponika-Regular', Arial, sans-serif;
+}
+
+.az-faito-text:hover {
+  margin-top: 10px;
+}
+
+.az-faito-down {
+  margin-top: -90px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .copyright {
