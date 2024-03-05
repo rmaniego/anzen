@@ -6,10 +6,6 @@ if (typeof (window as any).global === "undefined") {
 }
 </script>
 
-<script lang="ts" setup>
-
-</script>
-
 <template>
   <client-only>
     <div class="az-main">
@@ -22,6 +18,10 @@ if (typeof (window as any).global === "undefined") {
     </div>
   </client-only>
 </template>
+
+<script lang="ts" setup>
+
+</script>
 
 <style scoped>
 * {
