@@ -13,6 +13,11 @@ if (typeof (window as any).global === "undefined") {
 <template>
   <client-only>
     <div class="az-main">
+      <div class="az-samurai-main">
+        <div class="az-brand-anzen1">An</div>
+        <div class="az-brand-anzen2">Zen</div>
+        <img src="/samurai-main.png" class="az-samurai-sketch" width="300px" />
+      </div>
       <div class="copyright">&copy; 2024 <a href="https://github.com/rmaniego/" class="profile leckerli-one">Rydeon <span class="emoji1">⚡</span><span class="emoji2">✨</span></a></div>
     </div>
   </client-only>
@@ -21,6 +26,53 @@ if (typeof (window as any).global === "undefined") {
 <style scoped>
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'AkiraDEMO';
+  src: url('/font/AkiraDEMO.otf') format('opentype');
+}
+
+.az-main {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #eee !important;
+}
+
+.az-samurai-main {
+  position: absolute;
+  left: calc(50% - 150px);
+  margin-top: 150px;
+  width: 300px;
+}
+
+.az-samurai-sketch {
+  rotate: 355deg;
+}
+
+.az-brand-anzen1 {
+  position: absolute;
+  margin-left: -40px;
+  margin-top: 75px;
+  font-family: 'AkiraDEMO', Arial, sans-serif;
+  font-size: 100px;
+  font-weight: 400;
+  rotate: 355deg;
+  z-index: 100;
+}
+
+.az-brand-anzen2 {
+  position: absolute;
+  margin-left: 200px;
+  margin-top: 35px;
+  font-family: 'AkiraDEMO', Arial, sans-serif;
+  font-size: 100px;
+  font-weight: 400;
+  rotate: 355deg;
+  z-index: 100;
 }
 
 .copyright {
